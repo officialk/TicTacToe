@@ -5,7 +5,7 @@
     <link href="css/main.css" type="text/css" rel="stylesheet">
     <!--    importing materialize for style[optional]-->
     <link rel="stylesheet" href="../../material.css" type="text/css"><!--replace with actual link-->
-    <!--    importing icons for materialize[optional]-->
+    <!--    importing material-icons for materialize[optional]-->
     <link rel="stylesheet" href="../../common.css" type="text/css"><!--replace with actual link-->
     <!--    importing jquery-->
     <script src="../../jquery.js"></script><!--replace with actual link-->
@@ -31,7 +31,7 @@
                 </li>
             </ul>
             <ul class="brand-logo center hide-on-med-only" id="banner">
-                <i class="icons">clear & panorama_fish_eye</i>TicTacToe
+                <i class="material-icons">clear & panorama_fish_eye</i>TicTacToe
             </ul>
             <ul class="right">
                 <li class="flow-text" id="p2playing">
@@ -84,7 +84,8 @@
                 <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(8)"></h1>
             </div>
         </div>
-        <div class="col m3 l4"></div>
+        <div class="col m3 l4">
+        </div>
     </div>
     <div id="winnerScreen" class="modal">
         <div class="modal-content container">
@@ -93,14 +94,14 @@
             </center>
         </div>
         <div class="modal-footer row container">
-            <button class="blue btn left" onclick="resetGame()">Restart<i class="icons">update</i></button>
-            <button class="blue btn right" onclick="nextMatch()">Next Match<i class="icons">send</i></button>
+            <button class="blue btn left" onclick="resetGame()">Restart<i class="material-icons">update</i></button>
+            <button class="blue btn right" onclick="nextMatch()">Next Match<i class="material-icons">send</i></button>
         </div>
     </div>
     <div class="modal" id="start">
         <div class="modal-content">
             <center>
-                <h2><i class="icons medium">clear & panorama_fish_eye</i></h2>
+                <h2><i class="material-icons medium">clear & panorama_fish_eye</i></h2>
             </center>
             <div class="row container">
                 <div class="input-field col s12 m6 l6">
