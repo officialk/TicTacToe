@@ -2552,7 +2552,7 @@ video.responsive-video {
 .breadcrumb i,
 .breadcrumb [class^="mdi-"],
 .breadcrumb [class*="mdi-"],
-.breadcrumb i.material-icons {
+.breadcrumb i.icons {
     display: inline-block;
     float: left;
     font-size: 24px
@@ -3140,7 +3140,7 @@ input[type=range] + .thumb {
     padding: 0 !important
 }
 
-.material-icons {
+.icons {
     text-rendering: optimizeLegibility;
     font-feature-settings: 'liga'
 }
@@ -4352,7 +4352,7 @@ nav a {
 nav i,
 nav [class^="mdi-"],
 nav [class*="mdi-"],
-nav i.material-icons {
+nav i.icons {
     display: block;
     font-size: 24px;
     height: 56px;
@@ -4424,7 +4424,7 @@ nav .brand-logo.right {
 nav .brand-logo i,
 nav .brand-logo [class^="mdi-"],
 nav .brand-logo [class*="mdi-"],
-nav .brand-logo i.material-icons {
+nav .brand-logo i.icons {
     float: left;
     margin-right: 15px
 }
@@ -5645,7 +5645,7 @@ textarea.materialize-textarea + label:after {
 
 .input-field input[type=search]:focus + label i,
 .input-field input[type=search]:focus ~ .mdi-navigation-close,
-.input-field input[type=search]:focus ~ .material-icons {
+.input-field input[type=search]:focus ~ .icons {
     color: #444
 }
 
@@ -5654,7 +5654,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field input[type=search] ~ .mdi-navigation-close,
-.input-field input[type=search] ~ .material-icons {
+.input-field input[type=search] ~ .icons {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -6459,7 +6459,7 @@ input[type=range]:focus::-ms-fill-upper {
 .side-nav li > a > i,
 .side-nav li > a > [class^="mdi-"],
 .side-nav li > a > [class*="mdi-"],
-.side-nav li > a > i.material-icons {
+.side-nav li > a > i.icons {
     float: left;
     height: 48px;
     line-height: 48px;

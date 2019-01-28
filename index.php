@@ -6,7 +6,7 @@
     <!--    importing materialize for style[optional]-->
     <link rel="stylesheet" href="css/material.css" type="text/css">
     <!--replace with actual link-->
-    <!--    importing material-icons for materialize[optional]-->
+    <!--    importing icons for materialize[optional]-->
     <link rel="stylesheet" href="css/app.css" type="text/css">
     <!--replace with actual link-->
     <!--    importing jquery-->
@@ -35,7 +35,7 @@
                 </li>
             </ul>
             <ul class="brand-logo center hide-on-med-only" id="banner">
-                <i class="material-icons">clear & panorama_fish_eye</i>TicTacToe
+                <i class="icons">clear & panorama_fish_eye</i>TicTacToe
             </ul>
             <ul class="right">
                 <li class="flow-text" id="p2playing">
@@ -98,14 +98,14 @@
             </center>
         </div>
         <div class="modal-footer row container">
-            <button class="blue btn left" onclick="resetGame()">Restart<i class="material-icons">update</i></button>
-            <button class="blue btn right" onclick="nextMatch()">Next Match<i class="material-icons">send</i></button>
+            <button class="blue btn left" onclick="resetGame()">Restart<i class="icons">update</i></button>
+            <button class="blue btn right" onclick="nextMatch()">Next Match<i class="icons">send</i></button>
         </div>
     </div>
     <div class="modal" id="start">
         <div class="modal-content">
             <center>
-                <h2><i class="material-icons medium">clear & panorama_fish_eye</i></h2>
+                <h2><i class="icons medium">clear & panorama_fish_eye</i></h2>
             </center>
             <div class="row container">
                 <div class="input-field col s12 m6 l6">

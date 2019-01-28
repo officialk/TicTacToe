@@ -4211,7 +4211,7 @@ Vel = jQuery ? jQuery.Velocity : $ ? $.Velocity : Velocity, Materialize.Vel = Ve
                     CHIPS: ".chips",
                     CHIP: ".chip",
                     INPUT: "input",
-                    DELETE: ".material-icons",
+                    DELETE: ".icons",
                     SELECTED_CHIP: ".selected"
                 }, "data" === i) return this.$el.data("chips");
             var o = t.extend({}, e, i);
@@ -4289,7 +4289,7 @@ Vel = jQuery ? jQuery.Velocity : $ ? $.Velocity : Velocity, Materialize.Vel = Ve
             }, this.renderChip = function (e) {
                 if (e.tag) {
                     var i = t('<div class="chip"></div>');
-                    return i.text(e.tag), e.image && i.prepend(t("<img />").attr("src", e.image)), i.append(t('<i class="material-icons close">close</i>')), i
+                    return i.text(e.tag), e.image && i.prepend(t("<img />").attr("src", e.image)), i.append(t('<i class="icons close">close</i>')), i
                 }
             }, this.setPlaceholder = function (t) {
                 void 0 !== t.data("chips") && !t.data("chips").length && o.placeholder ? t.find("input").prop("placeholder", o.placeholder) : (void 0 === t.data("chips") || t.data("chips").length) && o.secondaryPlaceholder && t.find("input").prop("placeholder", o.secondaryPlaceholder)
