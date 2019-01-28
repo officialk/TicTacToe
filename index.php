@@ -4,15 +4,19 @@
     <!--    importing game character styles,etc-->
     <link href="css/main.css" type="text/css" rel="stylesheet">
     <!--    importing materialize for style[optional]-->
-    <link rel="stylesheet" href="../../material.css" type="text/css"><!--replace with actual link-->
+    <link rel="stylesheet" href="css/material.css" type="text/css">
+    <!--replace with actual link-->
     <!--    importing material-icons for materialize[optional]-->
-    <link rel="stylesheet" href="../../common.css" type="text/css"><!--replace with actual link-->
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+    <!--replace with actual link-->
     <!--    importing jquery-->
-    <script src="../../jquery.js"></script><!--replace with actual link-->
+    <script src="js/jquery.js"></script>
+    <!--replace with actual link-->
     <!--    importing jquery for materialize[optional]-->
-    <script src="../../material.js"></script><!--replace with actual link-->
+    <script src="js/material.js"></script>
+    <!--replace with actual link-->
     <!--    importing logic for the game-->
-    <script src="js/logic.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -117,8 +121,8 @@
         </div>
     </div>
     <audio id="audioPlayer" autoplay loop>
-            <source src="music1.mp3" type="audio/mpeg">
-        </audio>
+        <source src="music1.mp3" type="audio/mpeg">
+    </audio>
 </body>
 
 </html>
