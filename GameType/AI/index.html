@@ -4,113 +4,98 @@
     <!--    importing game character styles,etc-->
     <link href="css/main.css" type="text/css" rel="stylesheet">
     <!--    importing materialize for style[optional]-->
-    <link rel="stylesheet" href="css/material.css" type="text/css">
+    <link rel="stylesheet" href="../../css/material.css" type="text/css">
     <!--replace with actual link-->
     <!--    importing icons for materialize[optional]-->
-    <link rel="stylesheet" href="css/app.css" type="text/css">
+    <link rel="stylesheet" href="../../css/app.css" type="text/css">
     <!--replace with actual link-->
     <!--    importing jquery-->
-    <script src="js/jquery.js"></script>
+    <script src="../../js/jquery.js"></script>
     <!--replace with actual link-->
     <!--    importing jquery for materialize[optional]-->
-    <script src="js/material.js"></script>
-    <!--    importing Socketio for the game-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>
+    <script src="../../js/material.js"></script>
     <!--replace with actual link-->
     <!--    importing logic for the game-->
+    <script src="../../js/app.js"></script>
+    <!--    importing logic for type-->
     <script src="js/app.js"></script>
 </head>
 
-<body>
-    <nav class="blue white-text hide-on-small-only">
-        <div class="nav-wrapper">
-            <ul class="left">
-                <li>
-                    <h4 class="btn-flat" id="p1Points">0</h4>
-                </li>
-                <li class="flow-text truncate" id="player1">
-
-                </li>
-                <li class="flow-text">&nbsp;Playing:&nbsp;</li>
-                <li class="flow-text" id="p1playing">
-                    X
-                </li>
-            </ul>
-            <ul class="brand-logo center hide-on-med-only" id="banner">
-                <i class="icons">clear & panorama_fish_eye</i>TicTacToe
-            </ul>
-            <ul class="right">
-                <li class="flow-text" id="p2playing">
-                    O
-                </li>
-                <li class="flow-text">&nbsp;:Playing&nbsp;</li>
-                <li class="flow-text truncate" id="player2">
-                </li>
-                <li>
-                    <h4 class="btn-flat" id="p2Points">0</h4>
-                </li>
-            </ul>
-        </div>
+<body class="mainColor">
+    <nav class="mainColor">
+        <ul class="brand-logo center" id="banner">
+            <i class="icons">clear & panorama_fish_eye</i>TicTacToe
+        </ul>
     </nav>
-    <div class="show-on-small hide-on-med-and-up">
-        <h4 class="card blue center">
-            TicTacToe
-        </h4>
-        <div class="row card center blue">
-            <div class="col s1" id="p1Points">0</div>
-            <div class="col s5 truncate" id="player1"></div>
-            <div class="col s3">Playing:</div>
-            <div class="col s3" id="p1playing">X</div>
 
-            <div class="col s1" id="p2Points">0</div>
-            <div class="col s5 truncate" id="player2"></div>
-            <div class="col s3">Playing:</div>
-            <div class="col s3" id="p2playing">X</div>
+    <div class="row" id="playScreen">
+        <div class="col s12 m8 l9 center" id="gameBoard">
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(0)" id="box0"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(1)" id="box1"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(2)" id="box2"></a>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(3)" id="box3"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(4)" id="box4"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(5)" id="box5"></a>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(6)" id="box6"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(7)" id="box7"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(8)" id="box8"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l3">
+            <div class="card">
+                <div class="col s12 m12 l12">
+                    <div class="card player1">
+                        <div class="card-content">
+                            <b id="playerName">Player Name</b><br>
+                            Playing &nbsp;&nbsp;&nbsp;&nbsp;<b id="playerPlaying">X</b><br>
+                            Score&nbsp;&nbsp;&nbsp;&nbsp;<b id="playerScore">0</b>
+                        </div>
+                    </div>
+                    <div class="card computer">
+                        <div class="card-content">
+                            <b>Computer</b><br>
+                            Playing &nbsp;&nbsp;&nbsp;&nbsp;<b id="computerPlaying">X</b><br>
+                            Score&nbsp;&nbsp;&nbsp;&nbsp;<b id="computerScore">0</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col m3 l4"></div>
-        <div class="col s12 m8 l4 card blue">
-            <div class="row">
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(0)"></h1>
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(1)"></h1>
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(2)"></h1>
-            </div>
-            <div class="row">
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(3)"></h1>
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(4)"></h1>
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(5)"></h1>
-            </div>
-            <div class="row">
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(6)"></h1>
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(7)"></h1>
-                <h1 class="col s4 m4 l4 valign-wrapper center blue-text card box" onclick="checkBox(8)"></h1>
+    <div class="modal" id="enterName">
+        <div class="modal-content">
+            <div class="input-field col s12 m12 l12">
+                <input type="text" id="playerNameInput" placeholder="Enter Your Name">
+                <label for="playerNameInput">Enter Your Name</label>
             </div>
         </div>
-        <div class="col m3 l4">
+        <div class="modal-footer">
+            <div class="btn mainColor">Start Game</div>
         </div>
     </div>
-
-    <!--    MODALS-->
-
-    <div id="winnerScreen" class="modal">
-        <div class="modal-content container">
-            <center>
-                <h1 id="winner"></h1>
-            </center>
-        </div>
-        <div class="modal-footer row container">
-            <button class="blue btn left" onclick="resetGame()">Restart<i class="icons">update</i></button>
-            <button class="blue btn right" onclick="nextMatch()">Next Match<i class="icons">send</i></button>
-        </div>
-    </div>
-
-    <audio id="audioPlayer" autoplay loop>
-        <source src="music1.mp3" type="audio/mpeg">
-    </audio>
 </body>
 
 </html>

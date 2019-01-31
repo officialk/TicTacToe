@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <!--    importing game character styles,etc-->
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <!--    importing materialize for style[optional]-->
+    <link rel="stylesheet" href="../../css/material.css" type="text/css">
+    <!--replace with actual link-->
+    <!--    importing icons for materialize[optional]-->
+    <link rel="stylesheet" href="../../css/app.css" type="text/css">
+    <!--replace with actual link-->
+    <!--    importing jquery-->
+    <script src="../../js/jquery.js"></script>
+    <!--replace with actual link-->
+    <!--    importing jquery for materialize[optional]-->
+    <script src="../../js/material.js"></script>
+    <!--replace with actual link-->
+    <!--    importing logic for the game-->
+    <script src="../../js/app.js"></script>
+    <!--    importing logic for type-->
+    <script src="js/app.js"></script>
+</head>
+
+<body class="mainColor">
+    <nav class="mainColor">
+        <ul class="brand-logo center" id="banner">
+            <i class="icons">clear & panorama_fish_eye</i>TicTacToe
+        </ul>
+    </nav>
+
+    <div class="row" id="playScreen">
+        <div class="col s12 m8 l9 center" id="gameBoard">
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(0)" id="box0"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(1)" id="box1"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(2)" id="box2"></a>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(3)" id="box3"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(4)" id="box4"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(5)" id="box5"></a>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(6)" id="box6"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(7)" id="box7"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="tryPlot(8)" id="box8"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l3">
+            <div class="card">
+                <div class="col s12 m12 l12">
+                    <div class="card player1">
+                        <div class="card-content">
+                            <b id="playerName">Player Name</b><br>
+                            Playing &nbsp;&nbsp;&nbsp;&nbsp;<b id="playerPlaying">X</b><br>
+                            Score&nbsp;&nbsp;&nbsp;&nbsp;<b id="playerScore">0</b>
+                        </div>
+                    </div>
+                    <div class="card computer">
+                        <div class="card-content">
+                            <b>Computer</b><br>
+                            Playing &nbsp;&nbsp;&nbsp;&nbsp;<b id="computerPlaying">X</b><br>
+                            Score&nbsp;&nbsp;&nbsp;&nbsp;<b id="computerScore">0</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="enterName">
+        <div class="modal-content">
+            <div class="input-field col s12 m12 l12">
+                <input type="text" id="playerNameInput" placeholder="Enter Your Name">
+                <label for="playerNameInput">Enter Your Name</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="btn mainColor">Start Game</div>
+        </div>
+    </div>
+</body>
+
+</html>

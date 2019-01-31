@@ -1,7 +1,8 @@
 .box {
-    height: 120px;
+    height: 170px;
+    width: 100%;
     border-radius: 10px;
-    border: 1px solid white;
+    border: 10px solid rgba(255, 255, 255, 0);
     cursor: pointer;
     padding-left: 50px !important;
 }
@@ -13,6 +14,10 @@
     font-style: normal;
     font-weight: 400;
     src: url("icons.woff2") format('woff2');
+}
+
+.mainColor {
+    background: #1976D2 !important;
 }
 
 .icons {
