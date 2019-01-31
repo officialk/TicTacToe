@@ -32,55 +32,63 @@
         <div class="col s12 m8 l9 center" id="gameBoard">
             <div class="row container">
                 <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(0)" id="box0"></a>
+                    <a class="valign-wrapper center card box" onclick="plot(0)" id="box0"></a>
                 </div>
                 <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(1)" id="box1"></a>
+                    <a class="valign-wrapper center card box" onclick="plot(1)" id="box1"></a>
                 </div>
                 <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(2)" id="box2"></a>
-                </div>
-            </div>
-            <div class="row container">
-                <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(3)" id="box3"></a>
-                </div>
-                <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(4)" id="box4"></a>
-                </div>
-                <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(5)" id="box5"></a>
+                    <a class="valign-wrapper center card box" onclick="plot(2)" id="box2"></a>
                 </div>
             </div>
             <div class="row container">
                 <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(6)" id="box6"></a>
+                    <a class="valign-wrapper center card box" onclick="plot(3)" id="box3"></a>
                 </div>
                 <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(7)" id="box7"></a>
+                    <a class="valign-wrapper center card box" onclick="plot(4)" id="box4"></a>
                 </div>
                 <div class="col s4 m4 l4">
-                    <a class="valign-wrapper center card box" onclick="tryPlot(8)" id="box8"></a>
+                    <a class="valign-wrapper center card box" onclick="plot(5)" id="box5"></a>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="plot(6)" id="box6"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="plot(7)" id="box7"></a>
+                </div>
+                <div class="col s4 m4 l4">
+                    <a class="valign-wrapper center card box" onclick="plot(8)" id="box8"></a>
                 </div>
             </div>
         </div>
         <div class="col s12 m4 l3">
             <div class="card">
                 <div class="col s12 m12 l12">
-                    <div class="card player1">
+                    <div class="card player1" id="player1">
                         <div class="card-content">
                             <b id="player1Name">Player Name</b><br>
                             Playing &nbsp;&nbsp;&nbsp;&nbsp;<b id="player1Playing">X</b><br>
                             Score&nbsp;&nbsp;&nbsp;&nbsp;<b id="player1Score">0</b>
                         </div>
                     </div>
-                    <div class="card player2">
+                    <div class="card player2" id="player2">
                         <div class="card-content">
                             <b id="player2Name">Player Name</b><br>
                             Playing &nbsp;&nbsp;&nbsp;&nbsp;<b id="player2Playing">O</b><br>
                             Score&nbsp;&nbsp;&nbsp;&nbsp;<b id="player2Score">0</b>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="card" id="options">
+                <div class="col s6 m6 l6">
+                    <div class="btn-floating black blue-text" onclick="resetBoard();" title="NEXT GAME"><i class="icons">arrow_forward</i></div>
+                </div>
+                <div class="col s6 m6 l6">
+                    <div class="btn-floating black blue-text" onclick="resetGame();" title="RESET GAME"><i class="icons">delete</i></div>
                 </div>
             </div>
         </div>
