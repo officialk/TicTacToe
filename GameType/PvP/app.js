@@ -116,7 +116,7 @@ const resetSquares = () => {
     document.getElementById("player2").classList.remove("green", "red", "yellow", "white-text");
 }
 
-const resetBoard = () => {
+const nextGame = () => {
     resetSquares();
     if (player1.playing == "X") {
         player1.playing = "O";
