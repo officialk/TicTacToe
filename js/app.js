@@ -46,11 +46,12 @@ const checkDraw = () => {
 }
 
 const declareWinner = winner => {
+    console.log(winner);
     playable = false;
     winner[0].forEach(box => {
         blink(`box${box}`, "green white-text");
     })
-    if (winner == player1.playing) {
+    if (winner[1] == player1.playing) {
         blink("player1", "green white-text");
         blink("player2", "red white-text");
         player1.score++;
@@ -84,24 +85,12 @@ const resetSquares = () => {
     charToPlot = "X";
     showOptions(false);
     plotted = plotted.map((box, id) => {
-        console.log(`box${id}`);
         document.getElementById(`box${id}`).innerHTML = "";
         document.getElementById(`box${id}`).classList.remove("green", "red", "white-text");
         return 0;
     });
-    document.getElementById("player1").classList.remove("green", "red", "yellow", "white-text");
-    document.getElementById("player2").classList.remove("green", "red", "yellow", "white-text");
-}
-
-const nextGame = () => {
-    resetSquares();
-    if (player1.playing == "X") {
-        player1.playing = "O";
-        player2.playing = "X";
-    } else {
-        player1.playing = "X";
-        player2.playing = "O";
-    }
+    document.getElementById("player1").classList.remove("green", "red", "yellow", "white-text", "noPlay");
+    document.getElementById("player2").classList.remove("green", "red", "yellow", "white-text", "noPlay");
 }
 
 const resetGame = () => {

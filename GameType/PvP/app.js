@@ -12,6 +12,7 @@ const plot = (point) => {
     if (plotted[point] == 0 && playable) {
         plotted[point] = charToPlot;
         document.getElementById(`box${point}`).innerHTML = charToPlot;
+        document.getElementById(`box${point}`).className += " noPlay";
         charToPlot = (charToPlot == "X" ? "O" : "X");
         let winner = checkWin();
         if (winner != 0) {
@@ -21,6 +22,17 @@ const plot = (point) => {
                 declareDraw();
             }
         }
+    }
+}
+
+const nextGame = () => {
+    resetSquares();
+    if (player1.playing == "X") {
+        player1.playing = "O";
+        player2.playing = "X";
+    } else {
+        player1.playing = "X";
+        player2.playing = "O";
     }
 }
 
