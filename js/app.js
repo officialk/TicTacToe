@@ -86,11 +86,11 @@ const resetSquares = () => {
     showOptions(false);
     plotted = plotted.map((box, id) => {
         document.getElementById(`box${id}`).innerHTML = "";
-        document.getElementById(`box${id}`).classList.remove("green", "red", "white-text");
+        document.getElementById(`box${id}`).classList.remove("noPlay","green", "red", "white-text");
         return 0;
     });
-    document.getElementById("player1").classList.remove("green", "red", "yellow", "white-text", "noPlay");
-    document.getElementById("player2").classList.remove("green", "red", "yellow", "white-text", "noPlay");
+    document.getElementById("player1").classList.remove("green", "red", "yellow", "white-text");
+    document.getElementById("player2").classList.remove("green", "red", "yellow", "white-text");
 }
 
 const resetGame = () => {
