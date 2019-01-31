@@ -15,13 +15,13 @@ var plotted = [0, 0, 0, 0, 0, 0, 0, 0, 0],
 
 const initGame = (player1Name, player2Name) => {
     if (player1Name != player2Name && player1Name != "" && player2Name != "") {
-        $("#enterName").modal("close");
-        //    window.localStorage.setItem("name", player1Name);
-        //    window.localStorage.setItem("name2", player2Name);
+        window.localStorage.setItem("name", player1Name);
+        window.localStorage.setItem("name2", player2Name);
         setName("player1Name", player1Name);
         setName("player2Name", player2Name);
         player1.name = player1Name;
         player2.name = player2Name;
+        $("#enterName").modal("close");
     } else {
         alert("Enter Proper Info");
     }
