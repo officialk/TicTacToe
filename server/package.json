@@ -1,0 +1,14 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "This is a Server for tictactoe game",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "socket.io": "^2.2.0"
+    },
+    "author": "",
+    "license": "ISC"
+}

@@ -1,5 +1,5 @@
 var plotted = [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    playable = true,
+    playable = false,
     charToPlot = "X",
     player1 = {
         "name": "",
@@ -13,11 +13,11 @@ var plotted = [0, 0, 0, 0, 0, 0, 0, 0, 0],
     };
 
 const initGame = (player1Name, player2Name) => {
-    window.localStorage.setItem("name", player1Name);
     setName("player1Name", player1Name);
     setName("player2Name", player2Name);
     player1.name = player1Name;
     player2.name = player2Name;
+    playable = true;
 }
 
 const setName = (id, name) => {
@@ -46,7 +46,6 @@ const checkDraw = () => {
 }
 
 const declareWinner = winner => {
-    console.log(winner);
     playable = false;
     winner[0].forEach(box => {
         blink(`box${box}`, "green white-text");
@@ -78,6 +77,8 @@ const blink = (id, className) => {
 const refreshDisplay = () => {
     document.getElementById("player1Score").innerHTML = player1.score;
     document.getElementById("player2Score").innerHTML = player2.score;
+    document.getElementById("player1Playing").innerHTML = player1.playing;
+    document.getElementById("player2Playing").innerHTML = player2.playing;
 }
 
 const resetSquares = () => {
@@ -86,7 +87,7 @@ const resetSquares = () => {
     showOptions(false);
     plotted = plotted.map((box, id) => {
         document.getElementById(`box${id}`).innerHTML = "";
-        document.getElementById(`box${id}`).classList.remove("noPlay","green", "red", "white-text");
+        document.getElementById(`box${id}`).classList.remove("noPlay", "green", "red", "white-text");
         return 0;
     });
     document.getElementById("player1").classList.remove("green", "red", "yellow", "white-text");

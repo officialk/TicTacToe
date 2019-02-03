@@ -1,5 +1,6 @@
 const initPvC = (playerName) => {
     if (playerName != "computer" && playerName != "") {
+        localStorage.setItem("name", playerName);
         initGame(playerName, "Computer");
         $("#enterName").modal("close");
     } else {
