@@ -1,4 +1,4 @@
-const server = "http://192.168.137.1:9090";
+const server = "http://192.168.0.4:9090";
 
 var socket, roomId, oppId, timer;
 

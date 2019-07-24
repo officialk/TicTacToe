@@ -1,14 +1,22 @@
 <html>
 
 <head>
+    <link rel="manifest" href="/TicTacToe/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    importing game character styles,etc-->
-    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="/TicTacToe/favicon.ico">
+    <title>TicTacToe</title>
     <!--    importing materialize for style[optional]-->
     <link rel="stylesheet" href="css/material.css" type="text/css">
     <!--replace with actual link-->
     <!--    importing icons for materialize[optional]-->
     <link rel="stylesheet" href="css/app.css" type="text/css">
+    <!--    initializing stuff-->
+    <script src="js/init.js">
+        window.onload=()=>{
+            deferredPrompt.prompt();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -27,9 +35,9 @@
             <div class="col s12 m12 l12 card blue">
                 <div class="row center">
                     <br><br>
-                    <a href="GameType/AI/" class="btn hun btn-large blue-text white" title="Person v/s Computer"><b class="icons">person</b> Vs <b class="icons">computer</b></a><br><br>
-                    <a href="GameType/PvP/" class="btn hun btn-large blue-text white" title="Person v/s Person(local)"><b class="icons">person</b> Vs <b class="icons">person</b></a><br><br>
-                    <a href="GameType/Online/" class="btn hun btn-large blue-text white" title="Person v/s Person(online)"><b class="icons">person</b> Vs <b class="icons">language</b></a><br><br>
+                    <a id="AIPlay" href="GameType/AI/" class="btn hun btn-large blue-text white" title="Person v/s Computer"><b class="icons">person</b> Vs <b class="icons">computer</b></a><br><br>
+                    <a id="PvPPlay" href="GameType/PvP/" class="btn hun btn-large blue-text white" title="Person v/s Person(local)"><b class="icons">person</b> Vs <b class="icons">person</b></a><br><br>
+                    <a id="onlinePlay" href="GameType/Online/" class="btn hun btn-large blue-text white" title="Person v/s Person(online)"><b class="icons">person</b> Vs <b class="icons">language</b></a><br><br>
                 </div>
             </div>
         </div>
