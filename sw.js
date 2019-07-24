@@ -3,7 +3,6 @@ const version = "tic-1";
 const cacheFiles = [
     './',
     './manifest.json',
-    './splash.html',
 
     './css/app.css',
     './css/icons.woff2',

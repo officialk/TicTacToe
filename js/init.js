@@ -10,13 +10,18 @@ window.onload = () => {
                 console.log(error);
             });
     }
-
+    fetch("/TicTacToe/favicon.ico")
+        .then(e => {
+            console.log("online");
+            document
+                .getElementsByTagName("head")[0]
+                .insertAdjacentHTML("beforeend", "<link rel='icon' href='/TicTacToe/favicon.ico'>");
+        })
+        .catch(e => {
+            console.log(e);
+            document
+                .getElementsByTagName("head")[0]
+                .insertAdjacentHTML("beforeend", "<link rel='icon' href='/TicTacToe/images/icons/icons-72x72.png'>");
+            document.getElementById("onlinePlay").classList.add("disabled");
+        })
 }
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-});
